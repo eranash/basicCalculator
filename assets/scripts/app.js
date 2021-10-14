@@ -23,6 +23,7 @@ function writeToLog(operationID, prevResult, operationNum, newResult) {
 }
 
 function calculateResult(calcType) {
+  const inputNum = userInputToNum();
   if (
     calcType !== "ADD" &&
     calcType !== "SUBTRACT" &&
@@ -33,7 +34,7 @@ function calculateResult(calcType) {
     return;
   }
 
-  const inputNum = userInputToNum();
+  
   const initialResult = currentResult;
   let mathOperator;
   if (calcType === "ADD") {
